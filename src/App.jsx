@@ -9,9 +9,11 @@ import RollButton from './components/RollButton'
 
 function App() {
   //Generate New Die Function
-  const GenerateNewDate = () => {
+  const GenerateNewDie = () => {
+    const value = Math.ceil(Math.random() * 6)
     return {
-      value: Math.ceil(Math.random() * 6),
+      value: value ,
+      img:`../public/dice${value}.svg`,
       isHeld: false,
       id: nanoid()
     }
@@ -20,7 +22,7 @@ function App() {
   const allNewDice = () => {
     const newDice=[]
     for (let i = 0; i < 10; i++) {
-      newDice.push(GenerateNewDate())
+      newDice.push(GenerateNewDie())
       }
       return newDice
     }
@@ -54,7 +56,7 @@ function App() {
     setDice(oldDice => oldDice.map(die => {
       return die.isHeld 
         ? die
-        : GenerateNewDate()
+        : GenerateNewDie()
     }))
     rollCount();
   }
@@ -73,6 +75,7 @@ function App() {
     key={die.id} 
     id={die.id}
     value={die.value}
+    img={die.img}
     holdDice={holdDice}
   />)
 
@@ -83,7 +86,7 @@ function App() {
       <Rolls 
         tenzies={tenzies} 
         rolls={rolls}
-      />
+        />
       <div className='diceContainer'>
         {diceMap}
       </div>
