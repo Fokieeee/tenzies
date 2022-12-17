@@ -1,13 +1,15 @@
-*{
+* {
   box-sizing: border-box;
 }
-body{
+
+body {
   margin: 0;
   padding: 0;
-  background-color: #0B2434;
+  background-color: #0b2434;
 }
-.App{
-  font-family: 'Karla', sans-serif;
+
+.App {
+  font-family: "Karla", sans-serif;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -16,53 +18,54 @@ body{
   margin: 100px auto;
   width: 360px;
   height: 360px;
-  background-color: #F5F5F5 ;
+  background-color: #f5f5f5;
   border-radius: 10px;
 }
-.rollNums{
+
+.rollNums {
   font-size: 20px;
 }
-.title{
-  /* border: 1px solid; */
+
+.title {
   font-size: 40px;
   margin: 0;
   text-align: center;
   font-size: 25.6px;
   line-height: 30px;
   letter-spacing: -0.03em;
-  
-  color: #2B283A;
-
+  color: #2b283a;
 }
-.instructions{
-  /* border: 1px solid; */
+
+.instructions {
   text-align: center;
   font-size: 13.1072px;
   line-height: 16px;
   letter-spacing: -0.03em;
-  color: #4A4E74;
+  color: #4a4e74;
   max-width: 250px;
-
-
 }
-.scoreBoard{
+
+.scoreBoard {
   display: flex;
   position: absolute;
 }
-.rollNums{
+
+.rollNums {
   font-size: 15px;
 }
-.diceContainer{
+
+.diceContainer {
   display: grid;
   grid-template: auto auto / repeat(5, 1fr);
   gap: 25px;
   row-gap: 55px;
   margin-bottom: 80px;
 }
-.die{
+
+.die {
   height: 40px;
   width: 40px;
-  background:#F5F5F5;
+  background: #f5f5f5;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   display: flex;
@@ -70,8 +73,9 @@ body{
   align-items: center;
   cursor: pointer;
 }
-.dieTrue{
-  background:#59E391;
+
+.dieTrue {
+  background: #59e391;
   height: 40px;
   width: 40px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
@@ -81,26 +85,29 @@ body{
   align-items: center;
   cursor: pointer;
 }
-.dieNum{
+
+.dieNum {
   width: 35px;
   height: 35px;
-  background:#59E391;
+  background: #59e391;
 }
-.rollButton{
+
+.rollButton {
   position: absolute;
   top: 290px;
   width: 90px;
   height: 40px;
   border: none;
-  background: #5035FF;
+  background: #5035ff;
   box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
   border-radius: 3.81277px;
-  font-weight: 500; 
+  font-weight: 500;
   letter-spacing: 1px;
   font-size: 15px;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
 }
+
 .rollButton:focus {
   outline: none;
 }
@@ -108,27 +115,11 @@ body{
 .rollButton:active {
   box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.3);
 }
-.confetti{
+
+.confetti {
   height: 360px;
   width: 360px;
   align-items: center;
   justify-content: center;
   opacity: 0.7;
 }
-/* .record{
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  background-color: #59E391;
-  letter-spacing: 1px;
-  color: #FFFFFF;
-  position: absolute;
-  top: 10px;
-  left: 260px;
-  font-size: 13px;
-  width: 70px;
-  height: 24px;
-  font-weight: 500; 
-  border-radius: 4px;
-} */
